@@ -4,6 +4,11 @@ node ('Ubuntu-app-agent'){
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
+    
+    stage('SCA'){
+        build 'SCA-DependencyCheck'
+    }
+    
     stage('SAST'){
         build 'SAST-SNYK'
     }
