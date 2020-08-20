@@ -11,9 +11,9 @@ node ('Ubuntu-app-agent'){
     
     stage('SAST'){
         build 'SAST-SNYK'
+        build 'SAST-SONARQUBE'
     }
 
-    
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
