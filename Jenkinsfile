@@ -39,6 +39,7 @@ node ('Ubuntu-app-agent'){
     stage('DAST')
         {
         build 'DAST-ZAP'
+        build 'DAST-ARACHNI'
         }
  
 }
