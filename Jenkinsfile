@@ -25,9 +25,10 @@ node ('Ubuntu-app-agent'){
             app.push("latest")
         			}
          }
-    /*stage('SECURITY-IMAGE-SCANNER'){
-        build 'SECURITY-IMAGE-SCANNER-AQUAMICROSCANNER'
-    }*/
+    stage('SECURITY-IMAGE-SCANNER'){
+        build 'Cloud-Anchore'
+        build 'Cloud-Aquascanner'
+    }
   
     
     stage('Pull-image-server') {
